@@ -14,8 +14,17 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+#Aca vamos a crear una clase que va a retornar todo menos el password.
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'Cedula_persona', 'Edad_persona', 'Telefono_persona',
                   'Rol_persona', 'first_name', 'last_name']
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        #Datos que va a poder actualizar
+        fields = ['first_name', 'last_name', 'Cedula_persona', 'Edad_persona', 'Telefono_persona']
