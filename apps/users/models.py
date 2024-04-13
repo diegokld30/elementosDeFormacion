@@ -12,5 +12,5 @@ class User(AbstractUser):
     email = models.EmailField(unique=True)
 
     # Con esto se configura que se debe iniciar sesion con el email
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []

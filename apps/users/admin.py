@@ -26,7 +26,7 @@ class CustomUserAdmin(BaseUserAdmin):
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
-    list_display = ['first_name', 'last_name', 'Cedula_persona', 'email', 'Rol_persona', 'Telefono_persona',
+    list_display = ['username', 'last_name', 'Cedula_persona', 'email', 'Rol_persona', 'Telefono_persona',
                     'Edad_persona']
 
 admin.site.register(User, CustomUserAdmin)
