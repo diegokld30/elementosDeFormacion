@@ -6,7 +6,6 @@ from users.models import User
 
 from users.api.serializers import UserRegisterSerializer, UserSerializer, UserUpdateSerializer
 
-
 class RegisterView(APIView):
     def post(self, request):
         serializer = UserRegisterSerializer(data=request.data)
