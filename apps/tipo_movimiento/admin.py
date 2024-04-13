@@ -1,3 +1,6 @@
 from django.contrib import admin
+from apps.tipo_movimiento.models import TipoMovimiento
 
-# Register your models here.
+@admin.register(TipoMovimiento)
+class TipoMovimientoAdmin(admin.ModelAdmin):
+    list_display = ['tipo_movimiento', 'date_created', 'date_modified']
