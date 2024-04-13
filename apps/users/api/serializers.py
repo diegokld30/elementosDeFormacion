@@ -4,7 +4,7 @@ from apps.roles.api.serializer import RolSerializer
 
 
 class UserRegisterSerializer(serializers.ModelSerializer):
-    Rol_persona = RolSerializer()
+
     class Meta:
         model = User
         fields = ['email',  'Cedula_persona', 'Edad_persona', 'Telefono_persona','Rol_persona']
@@ -19,6 +19,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
 
 #Aca vamos a crear una clase que va a retornar todo menos el password.
 class UserSerializer(serializers.ModelSerializer):
+    Rol_persona = RolSerializer()
     class Meta:
         model = User
         fields = ['id', 'username', 'email','Cedula_persona', 'Edad_persona', 'Telefono_persona',
