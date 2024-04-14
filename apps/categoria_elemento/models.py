@@ -9,4 +9,4 @@ class CategoriaElementos(models.Model):
     date_modified = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.nombre_Categoria
+        return self.nombre_categoria
