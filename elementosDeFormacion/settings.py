@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.roles',
     'apps.movimientos',
     'apps.tipo_movimiento',
+    'apps.categoria_elemento',
 ]
 
 MIDDLEWARE = [

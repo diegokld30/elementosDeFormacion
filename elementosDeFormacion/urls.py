@@ -21,6 +21,7 @@ from drf_yasg.views import get_schema_view
 from apps.roles.api.router import router_rol
 from apps.movimientos.api.router import router_movimiento
 from apps.tipo_movimiento.api.router import router_tipoMovimiento
+from apps.categoria_elemento.api.router import router_categoria_elementos
 
 
 schema_view = get_schema_view(
@@ -43,7 +44,8 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('api/', include(router_rol.urls)),
     path('api/', include(router_movimiento.urls)),
-    path('api/', include(router_tipoMovimiento.urls))
+    path('api/', include(router_tipoMovimiento.urls)),
+    path('api/', include(router_categoria_elementos.urls)),
 
 ]
 
