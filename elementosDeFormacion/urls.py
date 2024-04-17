@@ -20,6 +20,7 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from apps.roles.api.router import router_rol
 from apps.movimientos.api.router import router_movimiento
+from apps.sitio.api.router import router_sitio
 from apps.tipo_movimiento.api.router import router_tipoMovimiento
 from apps.categoria_elemento.api.router import router_categoria_elementos
 from apps.tipo_elemento.api.router import router_tipoElemento
@@ -50,7 +51,8 @@ urlpatterns = [
     path('api/', include(router_categoria_elementos.urls)),
     path('api/', include(router_tipoElemento.urls)),
     path('api/', include(router_elementoMaterial.urls)),
-    path('api/',include(router_tipoSitio.urls))
+    path('api/',include(router_tipoSitio.urls)),
+    path('api/', include(router_sitio.urls)),
 
 ]
 
