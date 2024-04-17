@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from apps import *
+from apps import tipo_elemento
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'apps.categoria_elemento',
     'apps.tipo_elemento',
     'apps.elemento_material',
+    'apps.tipo_sitio',
 ]
 
 MIDDLEWARE = [
