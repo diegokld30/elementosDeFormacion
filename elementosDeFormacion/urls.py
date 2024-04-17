@@ -23,6 +23,7 @@ from apps.movimientos.api.router import router_movimiento
 from apps.tipo_movimiento.api.router import router_tipoMovimiento
 from apps.categoria_elemento.api.router import router_categoria_elementos
 from apps.tipo_elemento.api.router import router_tipoElemento
+from apps.elemento_material.api.router import router_elementoMaterial
 
 
 schema_view = get_schema_view(
@@ -48,6 +49,7 @@ urlpatterns = [
     path('api/', include(router_tipoMovimiento.urls)),
     path('api/', include(router_categoria_elementos.urls)),
     path('api/', include(router_tipoElemento.urls)),
+    path('api/', include(router_elementoMaterial.urls))
 
 ]
 

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.tipo_movimiento',
     'apps.categoria_elemento',
     'apps.tipo_elemento',
+    'apps.elemento_material',
 ]
 
 MIDDLEWARE = [
