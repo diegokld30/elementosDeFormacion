@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'apps.sitio',
     'apps.ficha',
     'apps.programa',
+    'apps.municipios',
 ]
 
 MIDDLEWARE = [
