@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'apps.ficha',
     'apps.programa',
     'apps.municipios',
+    'apps.centro',
 ]
 
 MIDDLEWARE = [
