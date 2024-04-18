@@ -26,6 +26,8 @@ from apps.categoria_elemento.api.router import router_categoria_elementos
 from apps.tipo_elemento.api.router import router_tipoElemento
 from apps.elemento_material.api.router import router_elementoMaterial
 from apps.tipo_sitio.api.router import router_tipoSitio
+from apps.programa.api.router import router_prog
+from apps.ficha.api.router import router_ficha
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -53,6 +55,8 @@ urlpatterns = [
     path('api/', include(router_elementoMaterial.urls)),
     path('api/',include(router_tipoSitio.urls)),
     path('api/', include(router_sitio.urls)),
+    path('api/', include(router_prog.urls)),
+    path('api/', include(router_ficha.urls)),
 
 ]
 

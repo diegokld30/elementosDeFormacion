@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'apps.elemento_material',
     'apps.tipo_sitio',
     'apps.sitio',
+    'apps.ficha',
+    'apps.programa',
 ]
 
 MIDDLEWARE = [
