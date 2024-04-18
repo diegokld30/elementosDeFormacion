@@ -31,6 +31,7 @@ from apps.ficha.api.router import router_ficha
 from apps.municipios.api.router import router_municipio
 from apps.centro.api.router import router_centro
 from apps.sede.api.router import router_sede
+from apps.area.api.router import router_area
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -63,6 +64,7 @@ urlpatterns = [
     path('api/', include(router_municipio.urls)),
     path('api/', include(router_centro.urls)),
     path('api/', include(router_sede.urls)),
+    path('api/', include(router_area.urls)),
 
 ]
 
