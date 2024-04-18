@@ -1,10 +1,11 @@
 from django.db import models
 from apps.categoria_elemento.models import CategoriaElementos
 from apps.tipo_elemento.models import TipoElemento
+from apps.sitio.models import Sitio
 from django.db.models import SET_NULL
 
 class ElementoMaterial(models.Model):
-    #sitio =
+    sitio = models.ForeignKey(Sitio, on_delete=SET_NULL, null=True)
     CodigoSena_Material = models.CharField(max_length=255)
     Categoria_Material = models.ForeignKey(CategoriaElementos, on_delete=SET_NULL, null=True)
     Tipo_Material = models.ForeignKey(TipoElemento, on_delete=SET_NULL, null=True)
