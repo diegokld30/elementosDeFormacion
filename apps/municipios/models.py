@@ -2,7 +2,6 @@ from django.db import models
 
 class Municipio(models.Model):
     nombre = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
 
