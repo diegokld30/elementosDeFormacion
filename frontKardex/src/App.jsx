@@ -2,6 +2,7 @@ import { AuthContextProvider, Dark, Light, MyRoutes } from './index'
 import styled, { ThemeProvider } from 'styled-components'
 import './App.css'
 import { createContext, useState } from 'react'
+import { Device } from './styles/breackpoints'
 
 export const ThemeContext = createContext(null)
 
@@ -10,29 +11,34 @@ function App() {
   const theme = themeuse === 'light' ? 'light' : 'dark'
   const themeStyle = theme === 'light' ? Light : Dark
 
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <>
       <ThemeContext.Provider value={{ theme, setTheme }}>
 
         <ThemeProvider theme={themeStyle}>
-            <AuthContextProvider>
-              <Container>
-                <section className="ContentSideBar">
+          <AuthContextProvider>
+            <Container className={sidebarOpen?"active":""}>
+              <section className="ContentSideBar">
 
-                </section>
+                sideBar
 
-                <section className="ContentMenuambur">
+              </section>
 
-                </section>
+              <section className="ContentMenuambur">
 
-                <section className="ContentRoutes">
+                Menu Hamburguesa
 
-                </section>
+              </section>
 
-                <MyRoutes /> 
+              <section className="ContentRoutes">
 
-              </Container>
-            </AuthContextProvider>
+                <MyRoutes />
+
+              </section>
+            </Container>
+          </AuthContextProvider>
         </ThemeProvider>
       </ThemeContext.Provider>
     </>
@@ -42,8 +48,40 @@ function App() {
 const Container = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  background-color: ${({theme}) => theme.bgtotal};
+  background-color: ${({ theme }) => theme.bgtotal};
 
+  .ContentSideBar{
+    display:none;
+
+  }
+  .ContentMenuambur{
+    display:block;
+    position: absolute;
+    left: 20px;
+  }
+  @media ${Device.tablet} {
+    grid-template-columns: 65px 1fr;
+    &.active{
+      grid-template-columns: 220px 1fr;
+    }
+    .ContentSideBar{
+      display:initial;
+    }
+    .ContentMenuambur{
+      display:none;
+    }
+
+  }
+
+  .ContentRoutes{
+    grid-column: 1 ;
+    width: 100%;
+    @media ${Device.tablet}{
+      grid-column: 2;
+    }
+
+    }
+  }
 `
 
 export default App
