@@ -8,5 +8,5 @@ class SitioSerializer(serializers.ModelSerializer):
     tipo_sitio = Tipo_sitioSerializer()
     class Meta:
         model = Sitio
-        fields = ['persona_encargada','nombre_sitio','tipo_sitio', 'ubicacion', 'FichaTecnica', 'date_created', 'date_modified']
+        fields = ['id','persona_encargada','nombre_sitio','tipo_sitio', 'ubicacion', 'FichaTecnica', 'date_created', 'date_modified']
 

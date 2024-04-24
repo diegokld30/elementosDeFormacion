@@ -4,4 +4,4 @@ from apps.tipo_sitio.models import Tipo_sitio
 class Tipo_sitioSerializer(ModelSerializer):
     class Meta:
         model = Tipo_sitio
-        fields = ['nombre_tipoSitio','date_created','date_modified']
+        fields = ['id','nombre_tipoSitio','date_created','date_modified']

@@ -6,4 +6,4 @@ class ProgramaSerializer(serializers.ModelSerializer):
     area_programa = AreaSerializer()
     class Meta:
         model = Programa
-        fields = ['nombre_programa', 'area_programa','date_created', 'date_modified']
+        fields = ['id','nombre_programa', 'area_programa','date_created', 'date_modified']

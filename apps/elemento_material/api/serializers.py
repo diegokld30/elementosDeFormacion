@@ -11,4 +11,4 @@ class ElementoMaterialSerializer(serializers.ModelSerializer):
 
         model = ElementoMaterial
 
-        fields = ['sitio','CodigoSena_Material', 'Categoria_Material', 'Tipo_Material','Nombre_Material','Tipo_Material','Nombre_Material','Descripcion_Material','stock', 'unidad_medida', 'producto_perecedero', 'FechaDevencimiento', 'date_created', 'date_modified']
+        fields = ['id','sitio','CodigoSena_Material', 'Categoria_Material', 'Tipo_Material','Nombre_Material','Tipo_Material','Nombre_Material','Descripcion_Material','stock', 'unidad_medida', 'producto_perecedero', 'FechaDevencimiento', 'date_created', 'date_modified']

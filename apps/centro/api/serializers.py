@@ -6,4 +6,4 @@ class CentroSerializer(serializers.ModelSerializer):
     municipio = MunicipioSerializer()
     class Meta:
         model = Centro
-        fields = ['nombre', 'municipio', 'date_created', 'date_modified']
+        fields = ['id','nombre', 'municipio', 'date_created', 'date_modified']

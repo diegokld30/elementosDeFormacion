@@ -6,4 +6,4 @@ class SedeSerializer(serializers.ModelSerializer):
     centro_sede = MunicipioSerializer()
     class Meta:
         model = Sede
-        fields = ['nombre_sede', 'centro_sede', 'direccion_sede', 'date_created', 'date_modified']
+        fields = ['id','nombre_sede', 'centro_sede', 'direccion_sede', 'date_created', 'date_modified']

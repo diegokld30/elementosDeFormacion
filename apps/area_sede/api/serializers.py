@@ -10,4 +10,4 @@ class AreaSedeSerializer(serializers.ModelSerializer):
     persona_administra = UserSerializer
     class Meta:
         model = AreaSede
-        fields = ['sede_area', 'area_AreaSede', 'persona_administra', 'date_created', 'date_modified']
+        fields = ['id','sede_area', 'area_AreaSede', 'persona_administra', 'date_created', 'date_modified']

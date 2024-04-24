@@ -8,4 +8,4 @@ class FichaSerializer(serializers.ModelSerializer):
     programa = ProgramaSerializer()
     class Meta:
         model = Ficha
-        fields = ['persona_ficha', 'programa', 'date_created', 'date_modified']
+        fields = ['id','persona_ficha', 'programa', 'date_created', 'date_modified']

@@ -4,4 +4,4 @@ from apps.municipios.models import Municipio
 class MunicipioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Municipio
-        fields = ['nombre', 'date_created', 'date_modified']
+        fields = ['id','nombre', 'date_created', 'date_modified']
