@@ -1,4 +1,4 @@
-import { AuthContextProvider, Dark, Light, MyRoutes } from './index'
+import { AuthContextProvider, Dark, Light, MyRoutes, Sidebar } from './index'
 import styled, { ThemeProvider } from 'styled-components'
 import './App.css'
 import { createContext, useState } from 'react'
@@ -22,7 +22,7 @@ function App() {
             <Container className={sidebarOpen?"active":""}>
               <section className="ContentSideBar">
 
-                sideBar
+                <Sidebar state={sidebarOpen} setState={()=>setSidebarOpen(!sidebarOpen)}></Sidebar>
 
               </section>
 
