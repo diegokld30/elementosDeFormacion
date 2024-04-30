@@ -1,4 +1,4 @@
-import { AuthContextProvider, Dark, Light, MyRoutes, Sidebar } from './index'
+import { AuthContextProvider, Dark, Light, Menuhambur, MyRoutes, Sidebar } from './index'
 import styled, { ThemeProvider } from 'styled-components'
 import './App.css'
 import { createContext, useState } from 'react'
@@ -28,7 +28,7 @@ function App() {
 
               <section className="ContentMenuambur">
 
-                Menu Hamburguesa
+                <Menuhambur></Menuhambur>
 
               </section>
 
