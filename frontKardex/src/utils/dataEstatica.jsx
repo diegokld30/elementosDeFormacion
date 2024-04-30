@@ -10,6 +10,7 @@ export const DesplegableUser = [
     icono: <v.iconoUser/>,
     tipo: "miperfil",
   },
+ 
   {
     text: "Configuracion",
     icono: <v.iconoSettings/>,
@@ -27,10 +28,16 @@ export const DesplegableUser = [
 //data SIDEBAR
 export const LinksArray = [
   {
+    label: "Perfil",
+    icon: <v.iconoUser />,
+    to: "/perfil",
+  },
+  {
     label: "Home",
     icon: <AiOutlineHome />,
     to: "/",
   },
+  
   {
     label: "Kardex",
     icon: <v.iconocategorias />,
