@@ -10,7 +10,7 @@ export default function LoginTemplate() {
     mutationKey: "Insertar usuario admin",
     mutationFn: async () => {
       const p = {
-        correo: "diego@info.com",
+        correo: "diego.kld23@info.com",
         pass: "diego123",
       };
       const dt = await insertarUsuarioAdmin(p)
