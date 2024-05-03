@@ -1,10 +1,15 @@
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 import { AuthContextProvider, Dark, Light, Menuhambur, MyRoutes, Sidebar } from './index'
 import styled, { ThemeProvider } from 'styled-components'
 import './App.css'
 import { createContext, useState } from 'react'
 import { Device } from './styles/breackpoints'
 
+
 export const ThemeContext = createContext(null)
+
+
 
 function App() {
   const [themeuse, setTheme] = useState('light')
@@ -38,6 +43,7 @@ function App() {
 
               </section>
             </Container>
+            <ReactQueryDevtools initialIsOpen={false} />
           </AuthContextProvider>
         </ThemeProvider>
       </ThemeContext.Provider>
