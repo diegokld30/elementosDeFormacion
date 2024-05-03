@@ -1,14 +1,19 @@
 import { Routes, Route } from "react-router-dom";
-
-import Home from "../components/templates/HomeTemplate";
+import { Home, Login, userAuth } from "../index";
+import { ProtectedRoute } from "../hooks/ProtectedRoute";
 
 export default function MyRoutes() {
+    const { user } = userAuth();
     return (
-        
-            <Routes>
+        <Routes>
+            <Route path="/login" element={<Login />} />
+
+            <Route element={<ProtectedRoute user={user} redirectTo="/login" />}>
                 <Route path="/" element={<Home />} />
-                {/* <Route path="/about" element={<About />} /> */}
-            </Routes>
-        
+            </Route>
+
+            {/* <Route path="/about" element={<About />} /> */}
+        </Routes>
+
     );
 }

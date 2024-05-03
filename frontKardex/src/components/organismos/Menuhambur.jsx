@@ -13,18 +13,18 @@ export function Menuhambur() {
           <HamburgerMenu onClick={() => setClick(!click)}>
             <label
               className={click ? "toggle active" : "toggle"}
-              for="checkbox"
+
             >
-              <div class="bars" id="bar1"></div>
-              <div class="bars" id="bar2"></div>
-              <div class="bars" id="bar3"></div>
+              <div className="bars" id="bar1"></div>
+              <div className="bars" id="bar2"></div>
+              <div className="bars" id="bar3"></div>
             </label>
           </HamburgerMenu>
         </section>
 
         <Menu $click={click.toString()}>
-          {LinksArray.map(({ icon, label, to }) => (
-            <div onClick={() => setClick(!click)} className="LinkContainer">
+          {LinksArray.map(({ icon, label, to }, index) => (
+            <div key={index} onClick={() => setClick(!click)} className="LinkContainer">
               <NavLink to={to} className="Links">
                 <div className="Linkicon">{icon}</div>
                 <span>{label}</span>
@@ -110,7 +110,7 @@ const HamburgerMenu = styled.span`
   .bars {
     width: 100%;
     height: 4px;
-    background-color: ${({theme}) => theme.text};
+    background-color: ${({ theme }) => theme.text};
     border-radius: 5px;
     transition-duration: 0.3s;
   }
