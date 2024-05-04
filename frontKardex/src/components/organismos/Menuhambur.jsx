@@ -135,29 +135,27 @@ const Menu = styled.div`
     props.$click == "true" ? `translateY(0)` : `translateY(1000%)`};
   transition: all 0.3s ease;
 
-  .LinkContainer{
-    &:hover{
-        background-color: ${(props) => props.theme.bgAlpha};
+  .LinkContainer {
+    &:hover {
+      background-color: ${(props) => props.theme.bgAlpha};
     }
-    .Links{
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        text-decoration:none;
-        color: ${(props) => props.theme.text};
-        height:80px;
+    .Links {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: ${(props) => props.theme.text};
+      height: 80px;
 
-        .Linkicon{
-            padding: ${v.mdSpacing} ${v.mdSpacing};
-            svg{
-                font-size: 25px;
-            }
-
+      .Linkicon {
+        padding: ${v.mdSpacing} ${v.mdSpacing};
+        svg {
+          font-size: 25px;
         }
+      }
     }
   }
 `;
-
 const Divider = styled.div`
   height: 1px;
   width: 100%;

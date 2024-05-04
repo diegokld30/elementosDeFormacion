@@ -36,7 +36,7 @@ export function LoginTemplate() {
     <Container >
       <div className="contentLogo">
         <img src={logo}></img>
-        <span>StockPRO</span>
+        <span>MatTracer</span>
       </div>
       <div className="bannerlateral">
         <img src={carrito}></img>
@@ -47,7 +47,7 @@ export function LoginTemplate() {
        {
         state && <RegistrarAdmin setState={()=>setState(!state)}/>
        }
-          <Titulo>StockPRO</Titulo>
+          <Titulo>MatTracer</Titulo>
           {stateInicio && (
             <TextoStateInicio>datos incorrectos</TextoStateInicio>
           )}
