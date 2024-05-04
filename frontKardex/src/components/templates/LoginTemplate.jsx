@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Btnsave, v, useAuthStore, InputText, FooterLogin } from "../../index";
+import { Btnsave, v, useAuthStore, InputText, FooterLogin, RegistrarAdmin } from "../../index";
 import { Device } from "../../styles/breackpoints";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -33,10 +33,10 @@ export function LoginTemplate() {
   }
 
   return (
-    <Container>
+    <Container >
       <div className="contentLogo">
         <img src={logo}></img>
-        <span>CoordiSoft</span>
+        <span>StockPRO</span>
       </div>
       <div className="bannerlateral">
         <img src={carrito}></img>
@@ -44,6 +44,9 @@ export function LoginTemplate() {
 
       <div className="contentCard">
         <div className="card">
+       {
+        state && <RegistrarAdmin setState={()=>setState(!state)}/>
+       }
           <Titulo>StockPRO</Titulo>
           {stateInicio && (
             <TextoStateInicio>datos incorrectos</TextoStateInicio>

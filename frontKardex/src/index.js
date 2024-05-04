@@ -5,6 +5,7 @@ export * from './components/organismos/FooterLogin';
 export * from './components/organismos/Menuhambur';
 export * from './components/organismos/ToggleTema';
 export * from './components/organismos/formularios/InputText';
+export * from './components/organismos/formularios/RegistrarAdmin';
 export * from './components/organismos/sidebar/Sidebar';
 export * from './components/organismos/sidebar/SidebarCard';
 export { default as HomeTemplate } from './components/templates/HomeTemplate';

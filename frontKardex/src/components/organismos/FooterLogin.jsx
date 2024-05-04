@@ -8,11 +8,11 @@ export function FooterLogin() {
         <GiPadlock />
         <span>
           Control de inventarios para los materiales de formacion del centro.
-          <br /> Nos encuentras directamente en coordinación
+          <br /> Bienvenidos.
         </span>
       </section>
       <section className="derechos">
-        <span>CoordiSoft </span>
+        <span>MatTracer </span>
         <div className="separador"></div>
         <span>Todos los derechos reservados</span>
         <div className="separador"></div>
