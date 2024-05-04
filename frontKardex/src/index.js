@@ -1,13 +1,16 @@
 export { default as App } from './App';
 export * from './components/atomos/icono';
 export * from './components/moleculas/Btnsave';
+export * from './components/organismos/FooterLogin';
 export * from './components/organismos/Menuhambur';
 export * from './components/organismos/ToggleTema';
+export * from './components/organismos/formularios/InputText';
 export * from './components/organismos/sidebar/Sidebar';
 export * from './components/organismos/sidebar/SidebarCard';
 export { default as HomeTemplate } from './components/templates/HomeTemplate';
-export { default as LoginTemplate } from './components/templates/LoginTemplate';
+export * from './components/templates/LoginTemplate';
 export * from './context/AuthContext';
+export * from './hooks/ProtectedRoute';
 export * from './main';
 export { default as Home } from './pages/Home';
 export { default as Login } from './pages/Login';
@@ -21,5 +24,3 @@ export * from './styles/variables';
 export * from './supabase/crudUsuarios';
 export * from './supabase/supaBase.config';
 export * from './utils/dataEstatica';
-
-
